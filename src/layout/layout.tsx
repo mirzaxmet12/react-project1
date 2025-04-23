@@ -1,9 +1,6 @@
 import { ReactNode } from 'react';
-import { Box, Typography } from '@mui/material';
-import AddToCartForm from '../addCart';
-import { Link } from 'react-router-dom';
-import Categories from '../pages/Categories';
-import Auth from '../pages/auth';
+import { Box } from '@mui/material';
+
 import Cart from '../pages/cart';
 
 interface LayoutProps {

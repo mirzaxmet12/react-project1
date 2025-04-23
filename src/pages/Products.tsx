@@ -13,7 +13,6 @@ import Categories from './Categories';
 import { useUpdateCartItem } from '../api/api';
 import { useAppDispatch, useAppSelector } from '../store';
 import { addCart, incQuantity } from '../store/cartSlice';
-import { useAddToCart } from '../addCart';
 
 interface Product {
     id: number,

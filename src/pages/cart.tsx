@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
 import { decQuantity, incQuantity, removeItem } from '../store/cartSlice';
 import { useAddToCart, useDeleteCartItem, useUpdateCartItem } from '../api/api';
@@ -16,15 +16,13 @@ interface CartProduct {
 const Cart = () => {
   const dispatch = useAppDispatch();
   const [cartDisplay, setCartDisplay] = useState(false)
-  const { data, isLoading, isError } = useAddToCart();
+  const {  isLoading, isError } = useAddToCart();
   const updateItem = useUpdateCartItem();
   const deleteItem = useDeleteCartItem();
   
   const cartItem = useAppSelector((state) => state.cart.items)
   const total = cartItem.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const closeCart = () => {
 
-  }
 
   const incHandleQuantityChange = (productId: number, quantity: number) => {
     if (quantity < 1) deleteItem.mutate(productId)

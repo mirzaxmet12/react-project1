@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useQuery, useMutation, useQueryClient } from 'react-query'
-import { useAppDispatch, useAppSelector } from '../store'
-import { logout, setData } from '../store/authSlice'
+import {  useAppSelector } from '../store'
+import {  setData } from '../store/authSlice'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 
