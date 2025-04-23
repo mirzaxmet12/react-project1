@@ -1,19 +1,21 @@
-import  { ReactNode } from 'react';
-import Navbar from '../pages/Navbar';
-import { Box } from '@mui/material';
+import { ReactNode } from 'react';
+import { Box, Typography } from '@mui/material';
+import AddToCartForm from '../addCart';
+import { Link } from 'react-router-dom';
+import Categories from '../pages/Categories';
+import Auth from '../pages/auth';
+import Cart from '../pages/cart';
 
 interface LayoutProps {
-    children: ReactNode; 
+    children: ReactNode;
 }
 
 function Layout({ children }: LayoutProps) {
     return (
-        <Box sx={{
-            display:'flex',
-        }}>
-            <Navbar/>
+        <Box>
+            <Cart/>
             {children}
-            
+
         </Box>
     );
 }
